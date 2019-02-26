@@ -12,7 +12,10 @@ var io = socket(server);
 io.on('connection', sock => {
   console.log('Socket connection made', sock.id);
   sock.on('chat', data => {
-    console.log(data)
     io.sockets.emit('chat', data);
+  });
+
+  sock.on("typing", data => {
+    sock.broadcast.emit("typing", data);
   });
 });
