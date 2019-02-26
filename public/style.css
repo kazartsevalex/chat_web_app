@@ -1,0 +1,23 @@
+#chat_container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto;
+  grid-template-rows: auto 50px 50px 50px;
+  grid-template-areas:
+    "chat_window"
+    "handle"
+    "message"
+    "send";
+}
+#chat_window {
+  grid-area: chat_window;
+}
+#handle {
+  grid-area: handle;
+}
+#message {
+  grid-area: message;
+}
+#send {
+  grid-area: send;
+}
